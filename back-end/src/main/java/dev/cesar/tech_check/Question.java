@@ -5,13 +5,13 @@ import jakarta.persistence.*;
 @Entity
 public class Question {
     @Id
-    @GeneratedValue(strategy = GenerationType.SEQUENCE)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id", nullable = false)
     private Long id;
 
-    @Column(name = "question", nullable = false)
+    @Column(name = "question", length = 500, nullable = false)
     String question;
-    @Column(name = "answer", nullable = false)
+    @Column(name = "answer", length = 500, nullable = false)
     String answer;
 
     public String getQuestion() {

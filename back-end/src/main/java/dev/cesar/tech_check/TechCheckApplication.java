@@ -1,13 +1,13 @@
-package dev.cesar.teck_check;
+package dev.cesar.tech_check;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class TeckCheckApplication {
+public class TechCheckApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(TeckCheckApplication.class, args);
+		SpringApplication.run(TechCheckApplication.class, args);
 	}
 
 }
