@@ -9,9 +9,9 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>dev.cesar</groupId>
-	<artifactId>teck_check</artifactId>
+	<artifactId>tech_check</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>teck_check</name>
+	<name>tech_check</name>
 	<description>A fullstack application build for practising technical interview questions.</description>
 	<properties>
 		<java.version>17</java.version>

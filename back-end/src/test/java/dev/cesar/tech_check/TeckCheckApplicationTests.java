@@ -1,4 +1,4 @@
-package dev.cesar.teck_check;
+package dev.cesar.tech_check;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;

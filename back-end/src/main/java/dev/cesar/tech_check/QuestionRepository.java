@@ -1,4 +1,4 @@
-package dev.cesar.teck_check;
+package dev.cesar.tech_check;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.util.Streamable;
