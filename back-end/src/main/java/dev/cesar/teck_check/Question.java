@@ -11,9 +11,25 @@ public class Question {
 
     @Column(name = "question", nullable = false)
     String question;
-
     @Column(name = "answer", nullable = false)
     String answer;
+
+    public String getQuestion() {
+        return question;
+    }
+
+    public void setQuestion(String question) {
+        this.question = question;
+    }
+
+    public String getAnswer() {
+        return answer;
+    }
+
+    public void setAnswer(String answer) {
+        this.answer = answer;
+    }
+
 
     public Long getId() {
         return id;
