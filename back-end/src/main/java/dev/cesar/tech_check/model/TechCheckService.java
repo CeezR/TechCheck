@@ -17,11 +17,15 @@ public class TechCheckService {
         this.topicRepository = topicRepository;
     }
 
-    public TopicsDto findAllTopics() {
-        return new TopicsDto(topicRepository.findAllTopicNames());
+    public TopicNamesDto findAllTopics() {
+        return new TopicNamesDto(topicRepository.findAllTopicNames());
     }
 
     public QuestionsDto findAllQuestions() {
         return new QuestionsDto(questionRepository.findAll());
+    }
+
+    public List<Topic> findAllQuestionsOfTopic(List<String> topics) {
+        return topicRepository.findByNameIn(topics);
     }
 }

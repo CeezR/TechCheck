@@ -21,7 +21,7 @@ public class TechCheckContoller {
     }
 
     @GetMapping(path="/topics")
-    ResponseEntity<TopicsDto> getAllTopics() {
+    ResponseEntity<TopicNamesDto> getAllTopics() {
         return ResponseEntity.ok().body(service.findAllTopics());
     }
 

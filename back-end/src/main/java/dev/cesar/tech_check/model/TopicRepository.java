@@ -18,4 +18,8 @@ public class TopicRepository {
     public List<String> findAllTopicNames() {
         return repo.findAllTopicNames();
     }
+
+    public List<Topic> findByNameIn(List<String> topics) {
+        return repo.findByNameIn(topics);
+    }
 }

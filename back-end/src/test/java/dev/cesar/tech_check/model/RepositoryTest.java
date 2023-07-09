@@ -25,6 +25,13 @@ class RepositoryTest {
     }
 
     @Test
+    void testToCheckThatFindAllByTopicReturnsAllQuestionsOfTopics() {
+        List<Topic> questions = topicRepository.findByNameIn(List.of("Science", "History"));
+        assertThat(questions).isNotNull();
+        assertThat(questions.size()).isEqualTo(2);
+    }
+
+    @Test
     void testToCheckThatFindAllTopicsReturnsAllTopics() {
         List<Topic> topics = topicRepository.findAll();
         assertThat(topics.size()).isEqualTo(4);

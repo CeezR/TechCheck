@@ -8,7 +8,6 @@ import org.springframework.test.context.ActiveProfiles;
 import java.util.List;
 
 import static org.assertj.core.api.Assertions.assertThat;
-import static org.junit.jupiter.api.Assertions.*;
 
 @SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.DEFINED_PORT)
 @ActiveProfiles("test")
@@ -19,10 +18,17 @@ class TechCheckServiceTest {
 
     @Test
     void testToCheckFindAllTopicsReturnListOfTopicNames() {
-        TopicsDto allTopics = service.findAllTopics();
+        TopicNamesDto allTopics = service.findAllTopics();
         assertThat(allTopics).isNotNull();
         assertThat(allTopics.topics()).contains("Science");
         assertThat(allTopics.topics().size()).isEqualTo(4);
+    }
+
+    @Test
+    void GetAllQuestionsByTopicReturnsCorrectValues() {
+        List<Topic> questionsOfTopic = service.findAllQuestionsOfTopic(List.of("Science", "History"));
+        assertThat(questionsOfTopic).isNotNull();
+        assertThat(questionsOfTopic.size()).isEqualTo(2);
     }
 
 }
