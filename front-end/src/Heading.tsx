@@ -8,11 +8,12 @@ import Offcanvas from 'react-bootstrap/Offcanvas';
 import TopicFilter from './TopicFilter';
 
 type HeadingProps = {
+  topics: string[] | undefined
   selectedTopics: string[]
   setSelectedTopics : React.Dispatch<React.SetStateAction<string[]>>
 }
 
-function Heading({selectedTopics, setSelectedTopics} : HeadingProps) {
+function Heading({topics, selectedTopics, setSelectedTopics} : HeadingProps) {
   const expand = "sm"
 
   return (
@@ -35,7 +36,7 @@ function Heading({selectedTopics, setSelectedTopics} : HeadingProps) {
               <Nav.Link href="#action1">Home</Nav.Link>
               <Nav.Link href="#action2">Link</Nav.Link>
               
-              <TopicFilter selectedTopics={selectedTopics} setSelectedTopics={setSelectedTopics}/>
+              <TopicFilter topics={topics} selectedTopics={selectedTopics} setSelectedTopics={setSelectedTopics}/>
 
             </Nav>
           </Offcanvas.Body>

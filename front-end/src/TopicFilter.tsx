@@ -4,12 +4,12 @@ import Form from 'react-bootstrap/esm/Form';
 import NavDropdown from 'react-bootstrap/esm/NavDropdown';
 
 type TopicFilterProps = {
+  topics: string[] | undefined
   selectedTopics: string[]
   setSelectedTopics : React.Dispatch<React.SetStateAction<string[]>>
 }
 
-const TopicFilter = ({selectedTopics, setSelectedTopics} : TopicFilterProps) => {
-  const [topics, setTopics] = useState<string[]>();
+const TopicFilter = ({topics, selectedTopics, setSelectedTopics} : TopicFilterProps) => {
   const [allChecked, setAllChecked] = useState<boolean>(true);
 
   const handleCheckboxClick = (event: MouseEvent<HTMLInputElement>) => {
@@ -29,21 +29,6 @@ const TopicFilter = ({selectedTopics, setSelectedTopics} : TopicFilterProps) => 
       }
     }
   };
-
-  useEffect(() => {
-    fetch('http://localhost:8080/api/topics')
-      .then(response => {
-        if (!response.ok) { 
-          throw new Error('Network response was not ok'); 
-        }
-        return response.json();
-      })
-      .then(data => {
-        setTopics(data.topics);
-        setSelectedTopics(data.topics);
-      })
-      .catch(error => console.error('Error:', error));
-  }, []);
 
   return (
     <NavDropdown title="Topic Filter" id={`offcanvasNavbarDropdown-expand-sm`}>
