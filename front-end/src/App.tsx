@@ -16,6 +16,7 @@ function App() {
       if (!response.ok) {
         throw new Error('Network response was not ok');
       }
+      console.log(response);
       const data: Question[] = await response.json();
       setQuestions(data);
       
