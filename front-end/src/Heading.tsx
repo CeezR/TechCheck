@@ -7,8 +7,13 @@ import NavDropdown from 'react-bootstrap/NavDropdown';
 import Offcanvas from 'react-bootstrap/Offcanvas';
 import TopicFilter from './TopicFilter';
 
-function Heading() {
-  const expand = "xxl"
+type HeadingProps = {
+  selectedTopics: string[]
+  setSelectedTopics : React.Dispatch<React.SetStateAction<string[]>>
+}
+
+function Heading({selectedTopics, setSelectedTopics} : HeadingProps) {
+  const expand = "sm"
 
   return (
     <Navbar key={expand} expand={expand} className="bg-body-tertiary mb-3">
@@ -30,18 +35,9 @@ function Heading() {
               <Nav.Link href="#action1">Home</Nav.Link>
               <Nav.Link href="#action2">Link</Nav.Link>
               
-              <TopicFilter />
+              <TopicFilter selectedTopics={selectedTopics} setSelectedTopics={setSelectedTopics}/>
 
             </Nav>
-            <Form className="d-flex mt-3">
-              <Form.Control
-                type="search"
-                placeholder="Search"
-                className="me-2"
-                aria-label="Search"
-              />
-              <Button variant="outline-success">Search</Button>
-            </Form>
           </Offcanvas.Body>
         </Navbar.Offcanvas>
       </Container>
