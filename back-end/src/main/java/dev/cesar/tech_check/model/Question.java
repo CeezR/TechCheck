@@ -11,9 +11,22 @@ public class Question {
     private Long id;
 
     @Column(name = "question", length = 500, nullable = false)
-    String question;
+    private String question;
+
     @Column(name = "answer", length = 500, nullable = false)
-    String answer;
+    private String answer;
+
+    @ManyToOne
+    @JoinColumn(name="topic_id", nullable=false)
+    private Topic topic;
+
+    public Topic getTopic() {
+        return topic;
+    }
+
+    public void setTopic(Topic topic) {
+        this.topic = topic;
+    }
 
     public String getQuestion() {
         return question;
@@ -31,12 +44,7 @@ public class Question {
         this.answer = answer;
     }
 
-
     public Long getId() {
         return id;
-    }
-
-    public void setId(Long id) {
-        this.id = id;
     }
 }
