@@ -1,5 +1,6 @@
 package dev.cesar.tech_check.model.controller;
 
+import dev.cesar.tech_check.model.QuestionListDto;
 import dev.cesar.tech_check.model.service.TechCheckService;
 import dev.cesar.tech_check.model.TopicNamesDto;
 import dev.cesar.tech_check.model.TopicsDto;
@@ -18,7 +19,7 @@ public class TechCheckContoller {
     }
 
     @GetMapping(path="/topics/bynames")
-    public ResponseEntity<TopicsDto> getTopics(@RequestParam List<String> topics) {
+    public ResponseEntity<QuestionListDto> getTopics(@RequestParam List<String> topics) {
         return ResponseEntity.ok().body(service.findAllQuestionsOfTopic(topics));
     }
 

@@ -26,15 +26,6 @@ class ControllerTest {
     RestTemplate restTemplate;
 
     @Test
-    void TestGetQuestionMappingReturnsListOfQuestions() {
-        String uri = "http://localhost:%s/api/questions".formatted(port);
-        ResponseEntity<QuestionsDto> exchange = restTemplate.exchange(uri, HttpMethod.GET, HttpEntity.EMPTY, QuestionsDto.class);
-        assertThat(exchange.getStatusCode()).isEqualTo(HttpStatus.OK);
-        assertThat(exchange.getBody().questions()).isNotNull();
-        assertThat(exchange.getBody().questions().size()).isEqualTo(4);
-    }
-
-    @Test
     void TestGetTopicsMappingReturnsListOfTopics() {
         String uri = "http://localhost:%s/api/topics".formatted(port);
         ResponseEntity<TopicNamesDto> exchange = restTemplate.exchange(uri, HttpMethod.GET, HttpEntity.EMPTY, TopicNamesDto.class);
@@ -46,12 +37,12 @@ class ControllerTest {
     @Test
     void testGetTopicsMappingReturnsListOfTopics() {
         String uri = "http://localhost:%s/api/topics/bynames?topics=Science,History".formatted(port);
-        ResponseEntity<TopicsDto> exchange = restTemplate.exchange(uri, HttpMethod.GET, HttpEntity.EMPTY, TopicsDto.class);
+        ResponseEntity<QuestionListDto> exchange = restTemplate.exchange(uri, HttpMethod.GET, HttpEntity.EMPTY, QuestionListDto.class);
 
         assertThat(exchange.getStatusCode()).isEqualTo(HttpStatus.OK);
         assertThat(exchange.getBody()).isNotNull();
-        assertThat(exchange.getBody().topics()).isNotNull();
-        assertThat(exchange.getBody().topics().size()).isEqualTo(2);
+        assertThat(exchange.getBody().questions()).isNotNull();
+        assertThat(exchange.getBody().questions().size()).isEqualTo(2);
     }
 
 

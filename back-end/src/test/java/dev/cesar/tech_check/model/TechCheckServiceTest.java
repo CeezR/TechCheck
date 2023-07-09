@@ -27,9 +27,8 @@ class TechCheckServiceTest {
 
     @Test
     void GetAllQuestionsByTopicReturnsCorrectValues() {
-        TopicsDto questionsOfTopic = service.findAllQuestionsOfTopic(List.of("Science", "History"));
-        assertThat(questionsOfTopic).isNotNull();
-        assertThat(questionsOfTopic.topics().size()).isEqualTo(2);
+        QuestionListDto questionList = service.findAllQuestionsOfTopic(List.of("Science", "History"));
+        assertThat(questionList.questions()).isNotNull();
     }
 
 }

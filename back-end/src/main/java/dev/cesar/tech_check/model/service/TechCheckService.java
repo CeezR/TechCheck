@@ -1,13 +1,12 @@
 package dev.cesar.tech_check.model.service;
 
-import dev.cesar.tech_check.model.QuestionListDto;
-import dev.cesar.tech_check.model.TopicNamesDto;
+import dev.cesar.tech_check.model.*;
 import dev.cesar.tech_check.model.repository.TopicRepository;
-import dev.cesar.tech_check.model.TopicsDto;
 import dev.cesar.tech_check.model.repository.QuestionRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.ArrayList;
 import java.util.List;
 
 @Service
@@ -26,11 +25,17 @@ public class TechCheckService {
         return new TopicNamesDto(topicRepository.findAllTopicNames());
     }
 
-    public QuestionListDto findAllQuestions() {
-        return new QuestionListDto(questionRepository.findAll());
+    public List<Question> findAllQuestions() {
+        return questionRepository.findAll();
     }
 
-    public TopicsDto findAllQuestionsOfTopic(List<String> topics) {
-        return new TopicsDto(topicRepository.findByNameIn(topics));
+    public QuestionListDto findAllQuestionsOfTopic(List<String> topics) {
+        List<QuestionDto> list = new ArrayList<>();
+        topicRepository.findByNameIn(topics).forEach(topic -> {
+            topic.getQuestions().stream().forEach((question -> {
+                list.add(new QuestionDto(topic.getName(), question.getQuestion(), question.getAnswer()));
+            }));
+        });
+        return new QuestionListDto(list);
     }
 }
