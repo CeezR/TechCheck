@@ -1,7 +1,6 @@
 package dev.cesar.tech_check.model;
 
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.TestMethodOrder;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.test.context.SpringBootTest;
@@ -12,15 +11,11 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.test.context.ActiveProfiles;
 import org.springframework.web.client.RestTemplate;
 
-import java.util.List;
-
 import static org.assertj.core.api.Assertions.assertThat;
-import static org.junit.jupiter.api.Assertions.*;
-import static org.junit.jupiter.api.MethodOrderer.*;
 
 @SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.DEFINED_PORT)
 @ActiveProfiles("test")
-class QuestionControllerTest {
+class ControllerTest {
 
     @Value("${server.port}")
     private int port;
@@ -34,7 +29,7 @@ class QuestionControllerTest {
         ResponseEntity<QuestionsDto> exchange = restTemplate.exchange(uri, HttpMethod.GET, HttpEntity.EMPTY, QuestionsDto.class);
         assertThat(exchange.getStatusCode()).isEqualTo(HttpStatus.OK);
         assertThat(exchange.getBody().questions()).isNotNull();
-        assertThat(exchange.getBody().questions().size()).isEqualTo(5);
+        assertThat(exchange.getBody().questions().size()).isEqualTo(4);
 
     }
 }

@@ -16,11 +16,20 @@ import static org.junit.jupiter.api.Assertions.*;
 class QuestionRepositoryTest {
 
     @Autowired
-    QuestionRepository repository;
+    QuestionRepository questionRepository;
+
+    @Autowired
+    TopicRepository topicRepository;
 
     @Test
     void testToCheckThatFindAllReturnAllQuestions() {
-        List<Question> questions = repository.findAll();
-        assertThat(questions.size()).isEqualTo(5);
+        List<Question> questions = questionRepository.findAll();
+        assertThat(questions.size()).isEqualTo(4);
+    }
+
+    @Test
+    void testToCheckThatFindAllTopicsReturnsAllTopics() {
+        List<Topic> topics = topicRepository.findAll();
+        assertThat(topics.size()).isEqualTo(4);
     }
 }
