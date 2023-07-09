@@ -19,10 +19,10 @@ class TechCheckServiceTest {
 
     @Test
     void testToCheckFindAllTopicsReturnListOfTopicNames() {
-        List<String> topics = service.findAllTopics();
-        assertThat(topics).isNotNull();
-        assertThat(topics).contains("Science");
-        assertThat(topics.size()).isEqualTo(4);
+        TopicsDto allTopics = service.findAllTopics();
+        assertThat(allTopics).isNotNull();
+        assertThat(allTopics.topics()).contains("Science");
+        assertThat(allTopics.topics().size()).isEqualTo(4);
     }
 
 }
