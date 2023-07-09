@@ -30,6 +30,14 @@ class ControllerTest {
         assertThat(exchange.getStatusCode()).isEqualTo(HttpStatus.OK);
         assertThat(exchange.getBody().questions()).isNotNull();
         assertThat(exchange.getBody().questions().size()).isEqualTo(4);
+    }
 
+    @Test
+    void TestGetTopicsMappingReturnsListOfTopics() {
+        String uri = "http://localhost:%s/api/topics".formatted(port);
+        ResponseEntity<TopicsDto> exchange = restTemplate.exchange(uri, HttpMethod.GET, HttpEntity.EMPTY, TopicsDto.class);
+        assertThat(exchange.getStatusCode()).isEqualTo(HttpStatus.OK);
+        assertThat(exchange.getBody().topics()).isNotNull();
+        assertThat(exchange.getBody().topics().size()).isEqualTo(3);
     }
 }
