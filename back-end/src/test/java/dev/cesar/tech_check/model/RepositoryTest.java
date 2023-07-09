@@ -1,5 +1,7 @@
 package dev.cesar.tech_check.model;
 
+import dev.cesar.tech_check.model.repository.QuestionRepository;
+import dev.cesar.tech_check.model.repository.TopicRepository;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;

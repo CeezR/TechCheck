@@ -1,10 +1,12 @@
-package dev.cesar.tech_check.model;
+package dev.cesar.tech_check.model.controller;
 
+import dev.cesar.tech_check.model.service.TechCheckService;
+import dev.cesar.tech_check.model.TopicNamesDto;
+import dev.cesar.tech_check.model.TopicsDto;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.CrossOrigin;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
+
+import java.util.List;
 
 @RestController
 @RequestMapping("/api")
@@ -15,9 +17,9 @@ public class TechCheckContoller {
         this.service = service;
     }
 
-    @GetMapping(path="/questions")
-    ResponseEntity<QuestionsDto> getAllQuestions() {
-        return ResponseEntity.ok().body(service.findAllQuestions());
+    @GetMapping(path="/topics/bynames")
+    public ResponseEntity<TopicsDto> getTopics(@RequestParam List<String> topics) {
+        return ResponseEntity.ok().body(service.findAllQuestionsOfTopic(topics));
     }
 
     @GetMapping(path="/topics")

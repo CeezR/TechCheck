@@ -45,7 +45,7 @@ class ControllerTest {
 
     @Test
     void testGetTopicsMappingReturnsListOfTopics() {
-        String uri = "http://localhost:%s/api/topics?names=Science,History".formatted(port);
+        String uri = "http://localhost:%s/api/topics/bynames?topics=Science,History".formatted(port);
         ResponseEntity<TopicsDto> exchange = restTemplate.exchange(uri, HttpMethod.GET, HttpEntity.EMPTY, TopicsDto.class);
 
         assertThat(exchange.getStatusCode()).isEqualTo(HttpStatus.OK);

@@ -1,5 +1,10 @@
-package dev.cesar.tech_check.model;
+package dev.cesar.tech_check.model.service;
 
+import dev.cesar.tech_check.model.QuestionListDto;
+import dev.cesar.tech_check.model.TopicNamesDto;
+import dev.cesar.tech_check.model.repository.TopicRepository;
+import dev.cesar.tech_check.model.TopicsDto;
+import dev.cesar.tech_check.model.repository.QuestionRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -21,11 +26,11 @@ public class TechCheckService {
         return new TopicNamesDto(topicRepository.findAllTopicNames());
     }
 
-    public QuestionsDto findAllQuestions() {
-        return new QuestionsDto(questionRepository.findAll());
+    public QuestionListDto findAllQuestions() {
+        return new QuestionListDto(questionRepository.findAll());
     }
 
-    public List<Topic> findAllQuestionsOfTopic(List<String> topics) {
-        return topicRepository.findByNameIn(topics);
+    public TopicsDto findAllQuestionsOfTopic(List<String> topics) {
+        return new TopicsDto(topicRepository.findByNameIn(topics));
     }
 }

@@ -1,5 +1,7 @@
-package dev.cesar.tech_check.model;
+package dev.cesar.tech_check.model.repository;
 
+import dev.cesar.tech_check.model.Topic;
+import dev.cesar.tech_check.model.repository.JPATopicRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.util.Streamable;
 import org.springframework.stereotype.Repository;

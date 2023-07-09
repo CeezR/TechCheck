@@ -1,5 +1,6 @@
 package dev.cesar.tech_check.model;
 
+import dev.cesar.tech_check.model.service.TechCheckService;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
@@ -26,9 +27,9 @@ class TechCheckServiceTest {
 
     @Test
     void GetAllQuestionsByTopicReturnsCorrectValues() {
-        List<Topic> questionsOfTopic = service.findAllQuestionsOfTopic(List.of("Science", "History"));
+        TopicsDto questionsOfTopic = service.findAllQuestionsOfTopic(List.of("Science", "History"));
         assertThat(questionsOfTopic).isNotNull();
-        assertThat(questionsOfTopic.size()).isEqualTo(2);
+        assertThat(questionsOfTopic.topics().size()).isEqualTo(2);
     }
 
 }
