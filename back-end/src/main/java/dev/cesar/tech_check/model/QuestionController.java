@@ -1,4 +1,4 @@
-package dev.cesar.tech_check;
+package dev.cesar.tech_check.model;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
@@ -18,8 +18,7 @@ public class QuestionController {
     QuestionRepository repo;
 
     @GetMapping
-    ResponseEntity<List<Question>> getAllMovies() {
-        List<Question> body = repo.findAll();
-        return ResponseEntity.ok().body(body);
+    ResponseEntity<QuestionsDto> getAllMovies() {
+        return ResponseEntity.ok().body(new QuestionsDto(repo.findAll()));
     }
 }

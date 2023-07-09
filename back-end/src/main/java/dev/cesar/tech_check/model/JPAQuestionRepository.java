@@ -1,4 +1,4 @@
-package dev.cesar.tech_check;
+package dev.cesar.tech_check.model;
 
 import org.springframework.data.repository.CrudRepository;
 

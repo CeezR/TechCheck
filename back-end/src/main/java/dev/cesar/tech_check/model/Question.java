@@ -1,6 +1,7 @@
-package dev.cesar.tech_check;
+package dev.cesar.tech_check.model;
 
-import jakarta.persistence.*;
+
+import javax.persistence.*;
 
 @Entity
 public class Question {
