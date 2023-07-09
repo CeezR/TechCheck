@@ -18,7 +18,9 @@ public class QuestionController {
     QuestionRepository repo;
 
     @GetMapping
-    ResponseEntity<QuestionsDto> getAllMovies() {
+    ResponseEntity<QuestionsDto> getAllQuestions() {
         return ResponseEntity.ok().body(new QuestionsDto(repo.findAll()));
     }
+
+    // TODO New get Mapping with a topicList query returns question of said topics
 }
