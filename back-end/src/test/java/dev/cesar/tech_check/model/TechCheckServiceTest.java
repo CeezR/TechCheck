@@ -21,7 +21,7 @@ class TechCheckServiceTest {
     void testToCheckFindAllTopicsReturnListOfTopicNames() {
         List<String> topics = service.findAllTopics();
         assertThat(topics).isNotNull();
-        assertThat(topics).contains("Math");
+        assertThat(topics).contains("Science");
         assertThat(topics.size()).isEqualTo(4);
     }
 

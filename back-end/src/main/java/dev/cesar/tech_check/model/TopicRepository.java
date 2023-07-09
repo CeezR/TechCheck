@@ -14,4 +14,8 @@ public class TopicRepository {
     public List<Topic> findAll() {
         return Streamable.of(repo.findAll()).toList();
     }
+
+    public List<String> findAllTopicNames() {
+        return repo.findAllTopicNames();
+    }
 }
