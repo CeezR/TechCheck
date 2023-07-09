@@ -1,6 +1,8 @@
 package dev.cesar.tech_check.model;
 
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
+
 import javax.persistence.*;
 
 @Entity
@@ -10,14 +12,15 @@ public class Question {
     @Column(name = "id", nullable = false)
     private Long id;
 
-    @Column(name = "question", length = 500, nullable = false)
+    @Column(name = "question_text", length = 500, nullable = false)
     private String question;
 
     @Column(name = "answer", length = 500, nullable = false)
     private String answer;
 
-    @ManyToOne
-    @JoinColumn(name="topic_id", nullable=false)
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name="topic_id")
+    @JsonBackReference
     private Topic topic;
 
     public Topic getTopic() {
