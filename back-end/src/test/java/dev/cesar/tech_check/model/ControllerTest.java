@@ -38,6 +38,6 @@ class ControllerTest {
         ResponseEntity<TopicsDto> exchange = restTemplate.exchange(uri, HttpMethod.GET, HttpEntity.EMPTY, TopicsDto.class);
         assertThat(exchange.getStatusCode()).isEqualTo(HttpStatus.OK);
         assertThat(exchange.getBody().topics()).isNotNull();
-        assertThat(exchange.getBody().topics().size()).isEqualTo(3);
+        assertThat(exchange.getBody().topics().size()).isEqualTo(4);
     }
 }

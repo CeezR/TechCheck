@@ -10,16 +10,24 @@ import org.springframework.web.bind.annotation.RestController;
 import java.util.List;
 
 @RestController
-@RequestMapping("/api/questions")
+@RequestMapping("/api")
 @CrossOrigin(origins = "*")
 public class QuestionController {
 
     @Autowired
-    QuestionRepository repo;
+    QuestionRepository questionRepository;
 
-    @GetMapping
+    @Autowired
+    TopicRepository topicRepository;
+
+    @GetMapping(path="/questions")
     ResponseEntity<QuestionsDto> getAllQuestions() {
-        return ResponseEntity.ok().body(new QuestionsDto(repo.findAll()));
+        return ResponseEntity.ok().body(new QuestionsDto(questionRepository.findAll()));
+    }
+
+    @GetMapping(path="/topics")
+    ResponseEntity<TopicsDto> getAllTopics() {
+        return ResponseEntity.ok().body(new TopicsDto(topicRepository.findAll()));
     }
 
     // TODO New get Mapping with a topicList query returns question of said topics
