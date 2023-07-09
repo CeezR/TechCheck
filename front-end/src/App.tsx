@@ -1,4 +1,8 @@
 import { useEffect, useState } from "react";
+import Heading from "./Heading";
+import TopicFilter from "./TopicFilter";
+import Board from "./Board";
+
 
 type Question = {
   id: string,
@@ -6,19 +10,22 @@ type Question = {
   answer: string,
 }
 
+type ApiResponse = {
+  questions: Question[];
+};
+
 function App() {
-  const [questions, setQuestions] = useState<Question[]>([]);
+  const [topicQuestions, setTopicQuestions] = useState<Question[]>([]);
 
   const fetchQuestions = async () => {
 
     try {
-      const response = await fetch("http://localhost:8080/api/questions")
+      const response = await fetch("http://localhost:8080/api/questions");
       if (!response.ok) {
         throw new Error('Network response was not ok');
       }
-      console.log(response);
-      const data: Question[] = await response.json();
-      setQuestions(data);
+      const data: ApiResponse = await response.json();
+      setTopicQuestions(data.questions);
       
     } catch (error) {
       console.error('Error:', error);
@@ -31,9 +38,8 @@ function App() {
 
   return (
     <>
-      <ul>
-        {questions.map((question) => <li>Question: {question.question} Answer: {question.answer}</li>)}
-      </ul>
+      <Heading />
+      <Board />
     </>
   )
 }
