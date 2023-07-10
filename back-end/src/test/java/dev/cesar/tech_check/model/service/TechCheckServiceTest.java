@@ -1,5 +1,7 @@
-package dev.cesar.tech_check.model;
+package dev.cesar.tech_check.model.service;
 
+import dev.cesar.tech_check.model.QuestionListDto;
+import dev.cesar.tech_check.model.TopicNamesDto;
 import dev.cesar.tech_check.model.service.TechCheckService;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;

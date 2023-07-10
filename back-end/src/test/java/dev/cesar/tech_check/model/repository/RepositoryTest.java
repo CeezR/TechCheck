@@ -1,5 +1,7 @@
-package dev.cesar.tech_check.model;
+package dev.cesar.tech_check.model.repository;
 
+import dev.cesar.tech_check.model.Question;
+import dev.cesar.tech_check.model.Topic;
 import dev.cesar.tech_check.model.repository.QuestionRepository;
 import dev.cesar.tech_check.model.repository.TopicRepository;
 import org.junit.jupiter.api.Test;

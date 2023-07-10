@@ -3,17 +3,6 @@ import Heading from "./Heading";
 import TopicFilter from "./TopicFilter";
 import Board from "./Board";
 
-
-type Question = {
-  id: string,
-  question: string,
-  answer: string,
-}
-
-type ApiResponse = {
-  questions: Question[];
-};
-
 function App() {
   const [topics, setTopics] = useState<string[]>();
   const [selectedTopics, setSelectedTopics] = useState<string[]>([]);
@@ -42,7 +31,7 @@ function App() {
   return (
     <>
       <Heading topics={topics} selectedTopics={selectedTopics} setSelectedTopics={setSelectedTopics}/>
-      <Board />
+      <Board selectedTopics={selectedTopics} />
     </>
   )
 }
