@@ -48,13 +48,13 @@ jobs:
 
       - name: Build with Maven
         run: mvn clean install
-        working-directory: TechCheck/back-end
+        working-directory: back-end
 
       - name: Upload artifact for deployment job
         uses: actions/upload-artifact@v3
         with:
           name: java-app
-          path: 'TechCheck/back-end/target/*.jar' 
+          path: 'back-end/target/*.jar' 
 
   deploy:
     permissions:
