@@ -22,12 +22,3 @@ spring:
     defer-datasource-initialization: true
     hibernate:
       ddl-auto: create-drop # none, create ...
-
-## Logging settings
-debug: true
-logging:
-  level:
-    org:
-      springframework:
-        boot:
-          autoconfigure: ERROR
