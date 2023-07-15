@@ -1,7 +1,0 @@
-.board {
-  height: 80%;
-  display: grid;
-  justify-content: center;
-  grid-template-rows: 1fr;
-  grid-template-columns: 80%;
-}

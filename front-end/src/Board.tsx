@@ -36,7 +36,7 @@ const Board = ({selectedTopics}: BordProps) => {
   }, [selectedTopics]);
 
   return (
-    <main className='board flex-container'>
+    <main className='board flex-container p-3'>
       {questions.length > 0 && <QuestionList questions={questions}/>}
     </main>
   )

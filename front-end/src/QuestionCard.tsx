@@ -1,27 +1,17 @@
 import React, { useState } from 'react';
 import { useSwipeable } from 'react-swipeable';
 import './QuestionCard.css'
-import { Button } from 'react-bootstrap';
 
 type QuestionCardProps = {
   question: Question;
-  onSwipeLeft: () => void;
-  onSwipeRight: () => void;
 };
 
-const QuestionCard: React.FC<QuestionCardProps> = ({ question, onSwipeLeft, onSwipeRight }) => {
+const QuestionCard: React.FC<QuestionCardProps> = ({ question }) => {
   const [fliped, setFliped] = useState(false);
-
-  const handlers = useSwipeable({
-    onSwipedLeft: () => onSwipeLeft(),
-    onSwipedRight: () => onSwipeRight(),
-    //preventDefaultTouchmoveEvent: true,
-    trackMouse: true
-  });
 
   return (
     <>
-      <div className={`flip-card ${fliped ? "fliped" : ""}`} {...handlers} onClick={() => setFliped(!fliped)}>
+      <div className={`flip-card ${fliped ? "fliped" : ""}`} onClick={() => setFliped(!fliped)}>
         <div className="flip-card-inner">
           <div className="flip-card-front p-3">
             <h3>{question.topic}</h3>
