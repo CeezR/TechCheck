@@ -7,6 +7,7 @@ import dev.cesar.tech_check.model.TopicsDto;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.Arrays;
 import java.util.List;
 
 @RestController
@@ -19,8 +20,9 @@ public class TechCheckContoller {
     }
 
     @GetMapping(path="/topics/bynames")
-    public ResponseEntity<QuestionListDto> getTopics(@RequestParam List<String> topics) {
-        return ResponseEntity.ok().body(service.findAllQuestionsOfTopic(topics));
+    public ResponseEntity<QuestionListDto> getTopics(@RequestParam String topics) {
+        List<String> topicList = Arrays.asList(topics.split(";;"));
+        return ResponseEntity.ok().body(service.findAllQuestionsOfTopic(topicList));
     }
 
     @GetMapping(path="/topics")

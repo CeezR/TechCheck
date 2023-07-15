@@ -12,10 +12,10 @@ public class Question {
     @Column(name = "id", nullable = false)
     private Long id;
 
-    @Column(name = "question_text", length = 500, nullable = false)
+    @Column(name = "question_text", length = 1000, nullable = false)
     private String question;
 
-    @Column(name = "answer", length = 500, nullable = false)
+    @Column(name = "answer", length = 1000, nullable = false)
     private String answer;
 
     @ManyToOne(fetch = FetchType.LAZY)
