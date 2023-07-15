@@ -1,9 +1,7 @@
-import React, { useEffect, useState } from 'react'
-import TopicFilter from './TopicFilter'
-import Flipcard from './Flipcard'
-import Container from 'react-bootstrap/Container';
-import Row from 'react-bootstrap/Row';
-import Col from 'react-bootstrap/Col';
+import { useEffect, useState } from 'react'
+import './Board.css'
+import QuestionList from './QuestionList';
+
 
 
 type ApiResponse = {
@@ -16,6 +14,10 @@ type BordProps = {
 
 const Board = ({selectedTopics}: BordProps) => {
   const [questions, setQuestions] = useState<Question[]>([]);
+  const [questionIndex, setQuestionIndex] = useState<number>(0);
+
+  const iOS =
+  typeof navigator !== 'undefined' && /iPad|iPhone|iPod/.test(navigator.userAgent);
 
   useEffect(() => {
     const topicsQueryParam = selectedTopics.join(',');
@@ -34,15 +36,9 @@ const Board = ({selectedTopics}: BordProps) => {
   }, [selectedTopics]);
 
   return (
-    <>
-    <Container>
-      {questions.map((question, index) => {
-          return <Row>
-                    <Col><Flipcard key={index} topic={question.topic} question={question.question} answer={question.answer} /></Col>
-                 </Row>
-      })}
-    </Container>
-    </>
+    <main className='board flex-container'>
+      {questions.length > 0 && <QuestionList questions={questions}/>}
+    </main>
   )
 }
 

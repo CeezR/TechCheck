@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import Heading from "./Heading";
 import TopicFilter from "./TopicFilter";
 import Board from "./Board";
+import './index.css'
 
 function App() {
   const [topics, setTopics] = useState<string[]>();
