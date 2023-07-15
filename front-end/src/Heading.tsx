@@ -1,9 +1,6 @@
-import Button from 'react-bootstrap/Button';
 import Container from 'react-bootstrap/Container';
-import Form from 'react-bootstrap/Form';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
-import NavDropdown from 'react-bootstrap/NavDropdown';
 import Offcanvas from 'react-bootstrap/Offcanvas';
 import TopicFilter from './TopicFilter';
 
@@ -28,7 +25,7 @@ function Heading({topics, selectedTopics, setSelectedTopics} : HeadingProps) {
         >
           <Offcanvas.Header closeButton>
             <Offcanvas.Title id={`offcanvasNavbarLabel-expand-${expand}`}>
-              Offcanvas
+              TechCheck
             </Offcanvas.Title>
           </Offcanvas.Header>
           <Offcanvas.Body>
