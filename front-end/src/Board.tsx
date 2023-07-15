@@ -14,13 +14,10 @@ type BordProps = {
 
 const Board = ({selectedTopics}: BordProps) => {
   const [questions, setQuestions] = useState<Question[]>([]);
-  const [questionIndex, setQuestionIndex] = useState<number>(0);
-
-  const iOS =
-  typeof navigator !== 'undefined' && /iPad|iPhone|iPod/.test(navigator.userAgent);
 
   useEffect(() => {
-    const topicsQueryParam = selectedTopics.join(',');
+    const topicsQueryParam = encodeURIComponent(selectedTopics.join(';;'));
+    console.log(`http://localhost:8080/api/topics/bynames?topics=${topicsQueryParam}`);
     fetch(`http://localhost:8080/api/topics/bynames?topics=${topicsQueryParam}`)
       .then(response => {
         if (!response.ok) { 

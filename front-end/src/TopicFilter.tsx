@@ -1,4 +1,4 @@
-import React, { useState, ChangeEvent, MouseEvent, useEffect } from 'react';
+import React, { useState, ChangeEvent, MouseEvent } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Form from 'react-bootstrap/esm/Form';
 import NavDropdown from 'react-bootstrap/esm/NavDropdown';
@@ -10,7 +10,7 @@ type TopicFilterProps = {
 }
 
 const TopicFilter = ({topics, selectedTopics, setSelectedTopics} : TopicFilterProps) => {
-  const [allChecked, setAllChecked] = useState<boolean>(true);
+  const [allChecked, setAllChecked] = useState<boolean>(topics == selectedTopics);
 
   const handleCheckboxClick = (event: MouseEvent<HTMLInputElement>) => {
     event.stopPropagation();

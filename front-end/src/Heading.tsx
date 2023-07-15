@@ -19,7 +19,7 @@ function Heading({topics, selectedTopics, setSelectedTopics} : HeadingProps) {
   return (
     <Navbar key={expand} expand={expand} className="bg-body-tertiary mb-3">
       <Container fluid>
-        <Navbar.Brand href="#">Navbar Offcanvas</Navbar.Brand>
+        <Navbar.Brand href="#">TechCheck</Navbar.Brand>
         <Navbar.Toggle aria-controls={`offcanvasNavbar-expand-${expand}`} />
         <Navbar.Offcanvas
           id={`offcanvasNavbar-expand-${expand}`}
@@ -34,7 +34,6 @@ function Heading({topics, selectedTopics, setSelectedTopics} : HeadingProps) {
           <Offcanvas.Body>
             <Nav className="justify-content-end flex-grow-1 pe-3">
               <Nav.Link href="#action1">Home</Nav.Link>
-              <Nav.Link href="#action2">Link</Nav.Link>
               
               <TopicFilter topics={topics} selectedTopics={selectedTopics} setSelectedTopics={setSelectedTopics}/>
 
