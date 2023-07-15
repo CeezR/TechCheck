@@ -1,5 +1,4 @@
 import { useEffect, useState } from 'react'
-import './Board.css'
 import QuestionList from './QuestionList';
 
 
