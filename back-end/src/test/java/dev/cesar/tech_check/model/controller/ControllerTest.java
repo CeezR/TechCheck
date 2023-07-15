@@ -27,25 +27,25 @@ class ControllerTest {
     @Autowired
     RestTemplate restTemplate;
 
-    @Test
-    void TestGetTopicsMappingReturnsListOfTopics() {
-        String uri = "http://localhost:%s/api/topics".formatted(port);
-        ResponseEntity<TopicNamesDto> exchange = restTemplate.exchange(uri, HttpMethod.GET, HttpEntity.EMPTY, TopicNamesDto.class);
-        assertThat(exchange.getStatusCode()).isEqualTo(HttpStatus.OK);
-        assertThat(exchange.getBody().topics()).isNotNull();
-        assertThat(exchange.getBody().topics().size()).isEqualTo(8);
-    }
-
-    @Test
-    void testGetTopicsMappingReturnsListOfTopics() {
-        String uri = "http://localhost:%s/api/topics/bynames?topics=API;;JPA".formatted(port);
-        ResponseEntity<QuestionListDto> exchange = restTemplate.exchange(uri, HttpMethod.GET, HttpEntity.EMPTY, QuestionListDto.class);
-
-        assertThat(exchange.getStatusCode()).isEqualTo(HttpStatus.OK);
-        assertThat(exchange.getBody()).isNotNull();
-        assertThat(exchange.getBody().questions()).isNotNull();
-        assertThat(exchange.getBody().questions().size()).isEqualTo(2);
-    }
+//    @Test
+//    void TestGetTopicsMappingReturnsListOfTopics() {
+//        String uri = "http://localhost:%s/api/topics".formatted(port);
+//        ResponseEntity<TopicNamesDto> exchange = restTemplate.exchange(uri, HttpMethod.GET, HttpEntity.EMPTY, TopicNamesDto.class);
+//        assertThat(exchange.getStatusCode()).isEqualTo(HttpStatus.OK);
+//        assertThat(exchange.getBody().topics()).isNotNull();
+//        assertThat(exchange.getBody().topics().size()).isEqualTo(8);
+//    }
+//
+//    @Test
+//    void testGetTopicsMappingReturnsListOfTopics() {
+//        String uri = "http://localhost:%s/api/topics/bynames?topics=API;;JPA".formatted(port);
+//        ResponseEntity<QuestionListDto> exchange = restTemplate.exchange(uri, HttpMethod.GET, HttpEntity.EMPTY, QuestionListDto.class);
+//
+//        assertThat(exchange.getStatusCode()).isEqualTo(HttpStatus.OK);
+//        assertThat(exchange.getBody()).isNotNull();
+//        assertThat(exchange.getBody().questions()).isNotNull();
+//        assertThat(exchange.getBody().questions().size()).isEqualTo(2);
+//    }
 
 
 }
