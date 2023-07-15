@@ -25,12 +25,12 @@ class RepositoryTest {
     @Test
     void testToCheckThatFindAllReturnAllQuestions() {
         List<Question> questions = questionRepository.findAll();
-        assertThat(questions.size()).isEqualTo(4);
+        assertThat(questions.size()).isEqualTo(8);
     }
 
     @Test
     void testToCheckThatFindAllByTopicReturnsAllQuestionsOfTopics() {
-        List<Topic> questions = topicRepository.findByNameIn(List.of("Science", "History"));
+        List<Topic> questions = topicRepository.findByNameIn(List.of("Java & OOP", "Advanced Java"));
         assertThat(questions).isNotNull();
         assertThat(questions.size()).isEqualTo(2);
     }
@@ -38,6 +38,6 @@ class RepositoryTest {
     @Test
     void testToCheckThatFindAllTopicsReturnsAllTopics() {
         List<Topic> topics = topicRepository.findAll();
-        assertThat(topics.size()).isEqualTo(4);
+        assertThat(topics.size()).isEqualTo(8);
     }
 }

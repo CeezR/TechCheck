@@ -23,13 +23,13 @@ class TechCheckServiceTest {
     void testToCheckFindAllTopicsReturnListOfTopicNames() {
         TopicNamesDto allTopics = service.findAllTopics();
         assertThat(allTopics).isNotNull();
-        assertThat(allTopics.topics()).contains("Science");
-        assertThat(allTopics.topics().size()).isEqualTo(4);
+        assertThat(allTopics.topics()).contains("Java & OOP");
+        assertThat(allTopics.topics().size()).isEqualTo(8);
     }
 
     @Test
     void GetAllQuestionsByTopicReturnsCorrectValues() {
-        QuestionListDto questionList = service.findAllQuestionsOfTopic(List.of("Science", "History"));
+        QuestionListDto questionList = service.findAllQuestionsOfTopic(List.of("Java & OOP", "Advanced Java"));
         assertThat(questionList.questions()).isNotNull();
     }
 
