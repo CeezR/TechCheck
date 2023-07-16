@@ -37,26 +37,36 @@ Follow these steps for a good experience:
 When building this project I ended up spending a good chunk of time on a feature which ended up going unused.
 Not only did this prove to be a waste of time
 
-## Lesson learned along the way 
 
-### Dont bite off more then you can chew, sometimes a simple solution is the best solution.
+## 🌟 Project Reflection 🌟
 
-### Dont build what you think you need, build what you actualy need! (KISS)
-Situation: Having finished the core curriculum of the salt java carrier bootcap I was excited to take my shot at building my very first fullstack application.
-The goal I set out for my self was to get something out, anthing to give some much deserved catersis to the 10 weeks of hard work I put in. 
-However being the practical guy that I am, I was unwiling to let my first work be nothing more than a show peice. Having known of the challenges
-ahead of me in my uppcoming interviews I decided on this project.
+### Learning the Art of Simplicity: 🚀 A Lesson in Overcomplication
 
-Task: The task with regards to the lesson had to do with the comunication between back-end and front-end. The application makes use of a in memory database to store two entities: Topic and Question where the topic contain OneToMany relationship with Question. The front-end needs to know what topic exist and also
-needs to display the questions of said topic. Furthermore the question list had to be responsive, so when the user changes the topic list, the questionlist
-automaticaly reloads.
+🌱 "Don't bite off more than you can chew. Sometimes, a simple solution is the best solution."
 
-Action: When outlining this goal, I considered two solution: 
-1. One single getMapping that returns topics list object with a quesion list field.
-2. Two getMapping, one that returns the topics name, and one that gets the question by topics where the url includes the RequestParam as a long string of topics
-I went with the second solution thinking that you should only request the data you need, furthermore it sound more techinaly impresive. XD
+🎯 "Don't build what you think you need, build what you actually need!"
 
-Result: The result of my decision lead me to spend many times the effort for a worst result. The back-end hosting cost is priced based on fetch calls macking the additional calls a bad econamical decision, beside the calls mostly contained the same data. I desinged my hobby small scale project as if it would contain tens of tousand of questions, when in reality I only ended up adding a hundred or so. This issue was not application breking but designing the additional enpoint, maping the entity data into the new object, getting the topic list from the querry param, fixing issue related to special characters in topic names and the additnal complexcity on the front-end realy realy was not worth it. 
+🥴 "KISS (Keep It Simple, Stupid)."
+
+#### 💡 Situation:
+Fresh off completing the core curriculum of the Salt Java Carrier Bootcamp, I was eager to create my very first full-stack application. The goal I set for myself was not merely to produce something tangible, a testament to the 10 grueling weeks of hard work, but also to create something practical and useful. As I was well aware of the challenges awaiting me in the upcoming interviews, this project was designed with a clear purpose in mind.
+
+#### 🔥 Task:
+The task was tied closely to the lessons learned around communication between the back-end and front-end. The application was designed to use an in-memory database to store two entities: Topic and Question, with Topic having a OneToMany relationship with Question. The front-end was responsible for fetching the available topics and displaying the related questions. Moreover, the question list needed to be responsive; as users selected different topics, the question list would automatically update.
+
+#### 💭 Action:
+To achieve this, I considered two potential solutions:
+
+A single getMapping that returns a list of Topic objects, each containing a list of Question objects.
+Two separate getMapping calls: one returning a list of Topic names, and the other fetching Question objects for a specific Topic, with the topic name passed as a RequestParam in the URL.
+I opted for the second solution, motivated by the belief that one should only request the data they need, and admittedly, it also seemed more technically impressive.
+
+#### 😕 Result:
+In retrospect, the chosen approach led me down a path of complexity that required significantly more effort for a less optimal result. The back-end hosting costs, based on fetch calls, meant that the additional requests were economically unwise, especially given that most calls returned largely similar data.
+
+My initial design was based on an assumption of the application scaling to tens of thousands of questions, whereas, in reality, only a hundred or so were added. While this miscalculation didn't break the application, the time and effort spent on designing the extra endpoint, mapping the entity data into a new object, handling the topic list from the query param, dealing with issues related to special characters in topic names, and managing the additional complexity on the front-end, was substantial and, in hindsight, unnecessary.
+
+This experience served as a valuable lesson 💡 in the importance of keeping things simple, understanding the actual needs of the project, and not overcomplicating the design unnecessarily.
 
 
 
