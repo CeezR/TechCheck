@@ -34,10 +34,6 @@ Follow these steps for a good experience:
 ![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)
 ![Bootstrap](https://img.shields.io/badge/Bootstrap-563D7C?style=for-the-badge&logo=bootstrap&logoColor=white)
 
-When building this project I ended up spending a good chunk of time on a feature which ended up going unused.
-Not only did this prove to be a waste of time
-
-
 ## 🌟 Project Reflection 🌟
 
 ### Learning the Art of Simplicity: 🚀 A Lesson in Overcomplication
