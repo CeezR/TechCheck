@@ -20,12 +20,6 @@ function App() {
         setSelectedTopics(data.topics);
       })
       .catch(error => console.error('Error:', error));
-      // 1. Dril down the selectedTopics into the Board
-      // 2. Inside the Board fetch Questions by selectedTopics
-      // 3. Randomise the question order
-      // 4. Line up the questions horizontaly, on swipe move to 
-      // the next question.
-      // 5. On click flip the question that show the answer
   }, []);
 
   return (
