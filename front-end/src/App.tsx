@@ -1,6 +1,5 @@
 import { useEffect, useState } from "react";
 import Heading from "./Heading";
-import TopicFilter from "./TopicFilter";
 import Board from "./Board";
 import './index.css'
 
@@ -9,7 +8,7 @@ function App() {
   const [selectedTopics, setSelectedTopics] = useState<string[]>([]);
 
   useEffect(() => {
-    fetch('http://localhost:8080/api/topics')
+    fetch('https://tech-check-cesar.azurewebsites.net/api/topics')
       .then(response => {
         if (!response.ok) { 
           throw new Error('Network response was not ok'); 

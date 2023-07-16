@@ -16,8 +16,8 @@ const Board = ({selectedTopics}: BordProps) => {
 
   useEffect(() => {
     const topicsQueryParam = encodeURIComponent(selectedTopics.join(';;'));
-    console.log(`http://localhost:8080/api/topics/bynames?topics=${topicsQueryParam}`);
-    fetch(`http://localhost:8080/api/topics/bynames?topics=${topicsQueryParam}`)
+    console.log(`https://tech-check-cesar.azurewebsites.net/api/topics/bynames?topics=${topicsQueryParam}`);
+    fetch(`https://tech-check-cesar.azurewebsites.net/api/topics/bynames?topics=${topicsQueryParam}`)
       .then(response => {
         if (!response.ok) { 
           throw new Error('Network response was not ok'); 
