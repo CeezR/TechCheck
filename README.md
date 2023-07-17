@@ -1,8 +1,10 @@
 # TechCheck
 A fullstack application build for practising technical interview questions. 
 
-Learning Objective(s)
-- Develop a Fullstack application from start to finish
+## 🎓 Learning Objectives
+
+This project serves as a learning exercise to gain proficiency in the following areas:
+- Full development life cycle
 - Deploy Back-end to Azure
 - Deploy Front-end to Vercel
 
