@@ -11,7 +11,7 @@ This project serves as a learning exercise to gain proficiency in the following 
 
 ## Table of Contents
 - [📱 Tech Stack](#-tech-stack)
-- [🖇️ Project Dependencies](#%EF%B8%8F-project-dependencies)
+- [🛠 Project Dependencies](#-project-dependencies)
 - [🚀 Getting Started / Installation](#-getting-started--installation)
 - [🔌 Usage](#-usage)
 - [🪩 Feature List](#-feature-list)
@@ -31,8 +31,16 @@ This project serves as a learning exercise to gain proficiency in the following 
 ![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)
 ![Bootstrap](https://img.shields.io/badge/Bootstrap-563D7C?style=for-the-badge&logo=bootstrap&logoColor=white)
 
-## 🖇️ Project Dependencies: 
-Include a list of project dependencies or a link to a requirements file. This helps users understand what libraries or packages are required to run the project successfully.
+## 🛠 Project Dependencies
+
+| Dependency | Description |
+|------------|-------------|
+| ![Maven](https://img.shields.io/badge/Maven-3.6.3-blue.svg) | [Maven](https://maven.apache.org/) is used for managing the project's build, report and documentation from a central piece of information. |
+| ![Spring Boot](https://img.shields.io/badge/Spring_Boot-2.4.1-brightgreen.svg) | [Spring Boot](https://spring.io/projects/spring-boot) provides a platform for Java developers to develop stand-alone, production-grade Spring applications that you can just run. |
+| ![Hibernate](https://img.shields.io/badge/Hibernate-5.4.25.Final-green.svg) | [Hibernate](https://hibernate.org/) is a robust Object/Relational Mapping tool for Java. |
+| ![JUnit](https://img.shields.io/badge/JUnit-5.7.0-orange.svg) | [JUnit](https://junit.org/) is a simple and powerful testing framework for Java. |
+
+Please refer to the `pom.xml` file for a complete list of dependencies.
 
 # 🚀 Getting Started / Installation
 Follow these steps to get the application up and running in your local environment:
