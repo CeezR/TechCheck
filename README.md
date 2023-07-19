@@ -30,17 +30,34 @@ This project serves as a learning exercise to gain proficiency in the following 
 ![Node.js](https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=nodedotjs&logoColor=white)
 ![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)
 ![Bootstrap](https://img.shields.io/badge/Bootstrap-563D7C?style=for-the-badge&logo=bootstrap&logoColor=white)
+![Hibernate](https://img.shields.io/badge/Hibernate-59666C?style=for-the-badge&logo=Hibernate&logoColor=white)
 
 ## 🛠 Project Dependencies
 
+### Back-End
+
 | Dependency | Description |
 |------------|-------------|
-| ![Maven](https://img.shields.io/badge/Maven-3.6.3-blue.svg) | [Maven](https://maven.apache.org/) is used for managing the project's build, report and documentation from a central piece of information. |
-| ![Spring Boot](https://img.shields.io/badge/Spring_Boot-2.4.1-brightgreen.svg) | [Spring Boot](https://spring.io/projects/spring-boot) provides a platform for Java developers to develop stand-alone, production-grade Spring applications that you can just run. |
-| ![Hibernate](https://img.shields.io/badge/Hibernate-5.4.25.Final-green.svg) | [Hibernate](https://hibernate.org/) is a robust Object/Relational Mapping tool for Java. |
-| ![JUnit](https://img.shields.io/badge/JUnit-5.7.0-orange.svg) | [JUnit](https://junit.org/) is a simple and powerful testing framework for Java. |
+| ![Java](https://img.shields.io/badge/Java-17-orange.svg) | [Java](https://www.java.com/en/), built using Java 17|
+| ![Maven](https://img.shields.io/badge/Maven-4.0.0-blue.svg) | [Maven](https://maven.apache.org/) is used for managing the project's build, report, and documentation from a central piece of information. |
+| ![Spring Boot](https://img.shields.io/badge/Spring_Boot-2.7.0-brightgreen.svg) | [Spring Boot](https://spring.io/projects/spring-boot) provides a platform for Java developers to develop stand-alone, production-grade Spring applications that you can just run. |
+| ![Hibernate](https://img.shields.io/badge/Hibernate-2.15.2-green.svg) | [Hibernate](https://hibernate.org/) is a robust Object/Relational Mapping tool for Java. |
+| ![JUnit](https://img.shields.io/badge/JUnit-5.9.3-orange.svg) | [JUnit](https://junit.org/) is a simple and powerful testing framework for Java. |
 
-Please refer to the `pom.xml` file for a complete list of dependencies.
+### Front-End
+
+| Dependency | Description |
+|------------|-------------|
+| ![React](https://img.shields.io/badge/React-18.0.37-61DAFB.svg) | [React](https://reactjs.org/) is a JavaScript library for building user interfaces. |
+| ![Vite](https://img.shields.io/badge/Vite-4.3.9-646CFF.svg) | [Vite](https://vitejs.dev/) is a build tool that aims to provide a faster and leaner development experience for modern web projects. |
+| ![TypeScript](https://img.shields.io/badge/TypeScript-5.0.2-3178C6.svg) | [TypeScript](https://www.typescriptlang.org/) is a typed superset of JavaScript that compiles to plain JavaScript. |
+
+### Database
+| Dependency | Description |
+|------------|-------------|
+| ![H2 Database](https://img.shields.io/badge/H2_Database-2.2.220-blue.svg) | [H2](https://www.h2database.com/html/main.html) is a fast in-memory database that supports JDBC API and R2DBC access, with a small (2mb) footprint. |
+
+Please refer to the `pom.xml` file and the `package.json` file for a complete list of dependencies.
 
 # 🚀 Getting Started / Installation
 Follow these steps to get the application up and running in your local environment:
