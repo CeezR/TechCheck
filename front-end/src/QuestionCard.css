@@ -1,15 +1,13 @@
-
 .flip-card {
-  margin-bottom: 3rem;
   background-color: transparent;
   scroll-snap-align: start; 
-  height: 80vh;
+  height: 90vh;
 }
 
 .flip-card-inner {
   position: relative;
   width: 100%;
-  height: 100%;
+  height: 80%;
   transition: transform 0.2s;
   transform-style: preserve-3d;
 }
