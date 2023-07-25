@@ -1,27 +1,24 @@
 # TechCheck
-
-## 📝 Project Description
 A fullstack application build for practising technical interview questions. 
 
-## 🎓 Learning Objectives
+### 🎓 Learning Objectives
 This project serves as a learning exercise to gain proficiency in the following areas:
 - Full development life cycle
 - Deploy Back-end to Azure
 - Deploy Front-end to Vercel
 
-## Table of Contents
+### Table of Contents
 - [📱 Tech Stack](#-tech-stack)
 - [🛠 Project Dependencies](#-project-dependencies)
 - [🚀 Getting Started / Installation](#-getting-started--installation)
 - [🔌 Usage](#-usage)
 - [🪩 Feature List](#-feature-list)
 - [🏛️ Project Structure](#%EF%B8%8F-project-structure)
-- [🪫 Known Issues and Limitations](#-known-issues-and-limitations)
+- [🚧 Known Issues and Limitations](#-known-issues-and-limitations)
 - [🧭 Contributing Guidelines](#-contributing-guidelines)
-- [🚨 License](#-license)
 - [🌟 Project Reflection](#-project-reflection)
 
-## 📱 Tech Stack
+### 📱 Tech Stack
 ![Docker](https://img.shields.io/badge/Docker-2CA5E0?style=for-the-badge&logo=docker&logoColor=white)
 ![Spring](https://img.shields.io/badge/Spring-6DB33F?style=for-the-badge&logo=spring&logoColor=white)
 ![Apache Maven](https://img.shields.io/badge/apache_maven-C71A36?style=for-the-badge&logo=apachemaven&logoColor=white)
@@ -32,9 +29,9 @@ This project serves as a learning exercise to gain proficiency in the following 
 ![Bootstrap](https://img.shields.io/badge/Bootstrap-563D7C?style=for-the-badge&logo=bootstrap&logoColor=white)
 ![Hibernate](https://img.shields.io/badge/Hibernate-59666C?style=for-the-badge&logo=Hibernate&logoColor=white)
 
-## 🛠 Project Dependencies
+### 🛠 Project Dependencies
 
-### Back-End
+#### Back-End
 
 | Dependency | Description |
 |------------|-------------|
@@ -44,7 +41,7 @@ This project serves as a learning exercise to gain proficiency in the following 
 | ![Hibernate](https://img.shields.io/badge/Hibernate-2.15.2-green.svg) | [Hibernate](https://hibernate.org/) is a robust Object/Relational Mapping tool for Java. |
 | ![JUnit](https://img.shields.io/badge/JUnit-5.9.3-orange.svg) | [JUnit](https://junit.org/) is a simple and powerful testing framework for Java. |
 
-### Front-End
+#### Front-End
 
 | Dependency | Description |
 |------------|-------------|
@@ -52,14 +49,14 @@ This project serves as a learning exercise to gain proficiency in the following 
 | ![Vite](https://img.shields.io/badge/Vite-4.3.9-646CFF.svg) | [Vite](https://vitejs.dev/) is a build tool that aims to provide a faster and leaner development experience for modern web projects. |
 | ![TypeScript](https://img.shields.io/badge/TypeScript-5.0.2-3178C6.svg) | [TypeScript](https://www.typescriptlang.org/) is a typed superset of JavaScript that compiles to plain JavaScript. |
 
-### Database
+#### Database
 | Dependency | Description |
 |------------|-------------|
 | ![H2 Database](https://img.shields.io/badge/H2_Database-2.2.220-blue.svg) | [H2](https://www.h2database.com/html/main.html) is a fast in-memory database that supports JDBC API and R2DBC access, with a small (2mb) footprint. |
 
 Please refer to the `pom.xml` file and the `package.json` file for a complete list of dependencies.
 
-# 🚀 Getting Started / Installation
+### 🚀 Getting Started / Installation
 Follow these steps to get the application up and running in your local environment:
 
 1. Clone the repo
@@ -71,26 +68,23 @@ Follow these steps to get the application up and running in your local environme
 | 3. Install Dependencies          | `npm install`             | `mvn install`             |
 | 4. Run the project               | `npm run dev`             | `mvn start`               |
 
-## 🔌 Usage 
+### 🔌 Usage 
 Describe how to use the application or project. Explain the main features, interactions, and any necessary steps to get started. You can include code snippets or examples to illustrate usage.
 
-## 🪩 Feature List
+### 🪩 Feature List
 Follow these steps for a good experience:
 - Topic Filter inside the meny alowes you to customise the topics that are loaded.
 - Click on the QuestionCard to see the answer
 - Scroll down for more answer
 
-## 🏛️ Project Structure
+### 🏛️ Project Structure
 If applicable, provide a brief description of the project's file structure and organization. This helps readers understand how the codebase is organized and where to find specific components or modules.
 
-## 🪫 Known Issues and Limitations: 
-It's helpful to mention any known issues or limitations of the project. This allows users to be aware of potential pitfalls and can save them time troubleshooting.
+### 🚧 Known Issues and Limitations:
+Cold Storage Delay: The back-end is currently hosted on Azure, utilizing a cold storage mechanism. As a result, if the page remains inactive for a certain period of time, the back-end code is moved into "cold storage." Consequently, when a user accesses the page after this period of inactivity, there might be a slight delay of a few dozen seconds before the back-end responds to the front-end.
 
-## 🧭 Contributing Guidelines: 
+### 🧭 Contributing Guidelines: 
 If you want to encourage others to contribute to your project, consider including guidelines for contributions. This can include information on how to submit bug reports, feature requests, or pull requests.
-
-## 🚨 License: 
-If applicable, specify the license under which the project is distributed. This clarifies the permissions and restrictions for users and contributors.
 
 ## 🌟 Project Reflection
 
