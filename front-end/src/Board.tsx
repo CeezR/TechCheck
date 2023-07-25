@@ -16,7 +16,6 @@ const Board = ({selectedTopics}: BordProps) => {
 
   useEffect(() => {
     const topicsQueryParam = encodeURIComponent(selectedTopics.join(';;'));
-    console.log(`https://tech-check-cesar.azurewebsites.net/api/topics/bynames?topics=${topicsQueryParam}`);
     fetch(`https://tech-check-cesar.azurewebsites.net/api/topics/bynames?topics=${topicsQueryParam}`)
       .then(response => {
         if (!response.ok) { 
@@ -25,7 +24,6 @@ const Board = ({selectedTopics}: BordProps) => {
         return response.json();
       })
       .then((data: ApiResponse) => {
-        console.log(data);
         setQuestions(data.questions)
       })
       .catch(error => console.error('Error:', error));
