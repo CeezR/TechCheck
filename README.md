@@ -69,7 +69,7 @@ Follow these steps to get the application up and running in your local environme
 | 4. Run the project               | `npm run dev`             | `mvn start`               |
 
 ### 🔌 Usage 
-![Alt text](/front-end/dist/assets/Menu1.png)
+
 Describe how to use the application or project. Explain the main features, interactions, and any necessary steps to get started. You can include code snippets or examples to illustrate usage.
 
 ### 🪩 Feature List
